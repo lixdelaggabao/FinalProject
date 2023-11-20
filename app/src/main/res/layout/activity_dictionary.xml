@@ -6,13 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".Dictionary">
 
-    <TextView
-        android:id="@+id/textView4"
+    <!--the main image at the top of the screen-->
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dictionary"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dictionary_128" />
+
+    <!--the welcome text below the image-->
+    <TextView
+        android:id="@+id/txtDictionaryWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/dictionaryWelcomeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <!--The enter text above the edit text-->
+    <TextView
+        android:id="@+id/txtDictionaryEnterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/dictionaryEnterText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryWelcome" />
+
+    <!--
+    The edit text the users enters the term to look up into.
+    This will create a shared preferences file if it does not exist to
+    save the last entered term
+    -->
+    <EditText
+        android:id="@+id/etDictionaryLookup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/dictionaryLookupHint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryEnterText" />
+
+    <!--the button the user clicks to look up a term in the dictionary-->
+    <Button
+        android:id="@+id/btnDictionaryLookup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/dictionaryBtnLookup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDictionaryLookup" />
+
+    <!--When clicked this button should bring the user to a separate page that
+    has a recycle view containing all the searches the user has saved.-->
+    <Button
+        android:id="@+id/btnDictionarySaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/dictionarySavedSearches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDictionaryLookup" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
