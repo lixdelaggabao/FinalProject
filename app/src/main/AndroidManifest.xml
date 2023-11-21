@@ -13,13 +13,16 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
+            android:name=".AllRecipes"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeDetails"
+            android:exported="false" />
+        <activity
             android:name=".Dictionary"
             android:exported="false" />
         <activity
             android:name=".DeezerSongSearch"
-            android:exported="false" />
-        <activity
-            android:name=".DictionaryAPI"
             android:exported="false" />
         <activity
             android:name=".RecipeSearch"
