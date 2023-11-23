@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="DarkGray">#AAAAAA</color>
     <color name="colorPrimary"> #6200EE </color>
+    <color name="softLavender">#EDE7F6</color>
 </resources>
