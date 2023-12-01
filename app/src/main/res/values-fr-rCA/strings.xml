@@ -5,7 +5,6 @@
     <string name="dictionaryEnterText">Entrez le terme à rechercher ci-dessous.</string>
     <string name="dictionaryLookupHint">Entrez le terme.</string>
     <string name="dictionaryBtnLookup">Chercher</string>
-    <string name="dictionarySavedSearches">Recherches sauvegardées</string>
-    <string name="dictionaryLookupTopText">Voici le terme que vous avez recherché :</string>
-    <string name="dictionaryLookupButton">Sauvegarder</string>
+    <string name="dictionarySavedSearches">Enregistré</string>
+    <string name="dictionaryBtnSearch">Recherche</string>
 </resources>

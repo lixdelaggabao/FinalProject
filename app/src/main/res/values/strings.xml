@@ -2,9 +2,8 @@
     <string name="app_name">FinalProject</string>
     <string name="dictionaryWelcomeText">Welcome to the Mobile Dictionary!</string>
     <string name="dictionaryEnterText">Enter term to lookup below.</string>
-    <string name="dictionaryLookupHint">Enter term.</string>
+    <string name="dictionaryLookupHint">Search the Mobile Dictionary.</string>
     <string name="dictionaryBtnLookup">Lookup</string>
-    <string name="dictionarySavedSearches">Saved Searches</string>
-    <string name="dictionaryLookupTopText">Here is the term you searched for:</string>
-    <string name="dictionaryLookupButton">Save</string>
+    <string name="dictionarySavedSearches">Saved</string>
+    <string name="dictionaryBtnSearch">Search</string>
 </resources>

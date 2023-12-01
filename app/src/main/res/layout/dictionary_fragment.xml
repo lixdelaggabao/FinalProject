@@ -4,44 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dictionary.dictionaryLookUp">
+    android:background="@color/white">
 
     <TextView
-        android:id="@+id/txtDictionaryLookupTop"
+        android:id="@+id/txtDictionaryFragmentID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/dictionaryLookupTopText"
+        android:layout_marginTop="16dp"
+        android:text="ID goes here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtDictionaryLookupTerm"
+        android:id="@+id/txtDictionaryFragmentTerm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="Term goes here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryLookupTop" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryFragmentID" />
 
-    <Button
-        android:id="@+id/btnDictionaryLookupSave"
+    <TextView
+        android:id="@+id/txtDictionaryFragmentDefinition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/dictionaryLookupButton"
+        android:text="Definition goes here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryLookupTerm" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="563dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDictionaryLookupSave" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDictionaryFragmentTerm" />
 </androidx.constraintlayout.widget.ConstraintLayout>
