@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Projet Final</string>
+    <string name="sunrise_and_sunset_lookup">Recherche du lever et du coucher du soleil</string>
+    <string name="recipe_search">Recherche de recettes</string>
+    <string name="dictionary">Dictionnaire</string>
+    <string name="deezer_song_search">Recherche de chansons Deezer</string>
+    <string name="recipe_search_menu_home">Maison</string>
+    <string name="recipe_search_menu_save_recipe">Enregistrer la recette</string>
+    <string name="recipe_search_menu_delete_recipe">Supprimer la recette</string>
+    <string name="recipe_search_menu_view_recipes">Afficher les recettes enregistrées</string>
+    <string name="recipe_search_menu_help">Aide</string>
+    <string name="recipe_search_menu_about">À propos</string>
+    <string name="recipe_search_help_title">Instructions:</string>
+    <string name="recipe_search_help_message">1. Utilisez la barre de recherche pour trouver la recette souhaitée.\n2. Cliquez sur une recette pour afficher des informations détaillées\n3. Enregistrez les recettes que vous aimez pour un accès facile à tout moment.\n4. Explorez et gérez vos recettes enregistrées en appuyant sur le bouton "Afficher toutes les recettes".</string>
+    <string name="recipe_search_help_button">D\'ACCORD</string>
+    <string name="recipe_search_about_message">Version 1.0, créée par Lixdel Louisse Aggabao</string>
+    <string name="recipe_search_search_hint">Rechercher une recette...</string>
+    <string name="recipe_search_delete_recipe_title">Question:</string>
+    <string name="recipe_search_delete_recipe_message">Voulez-vous supprimer la recette:</string>
+    <string name="recipe_search_delete_recipe_positive">Oui</string>
+    <string name="recipe_search_delete_recipe_negative">Non</string>
+    <string name="recipe_search_delete_recipe_confirmation">Vous avez supprimé la recette:</string>
+    <string name="recipe_search_delete_recipe_undo">Annuler</string>
+    <string name="recipe_search_successful_save_message">Recette enregistrée avec succès.</string>
+    <string name="recipe_search_failed_save_message">Cette recette existe déjà dans vos recettes enregistrées.</string>
+    <string name="recipe_search_saved_recipes_text">Recettes Enregistrées</string>
+    <string name="recipe_search_image_description">Image de</string>
+</resources>

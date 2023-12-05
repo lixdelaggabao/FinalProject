@@ -3,18 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/viewRecipes"
-        android:title="View All Recipes"
-        app:showAsAction="never" />
+        android:id="@+id/home"
+        android:icon="@drawable/recipe_search_home"
+        android:title="@string/recipe_search_menu_home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/saveRecipe"
+        android:icon="@drawable/recipe_search_save"
+        android:title="@string/recipe_search_menu_save_recipe"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/deleteRecipe"
-        android:icon="@drawable/delete"
-        android:title="Delete Recipe"
-        app:showAsAction="always" />
+        android:icon="@drawable/recipe_search_delete"
+        android:title="@string/recipe_search_menu_delete_recipe"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/viewRecipes"
+        android:title="@string/recipe_search_menu_view_recipes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/help"
+        android:title="@string/recipe_search_menu_help"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/about"
-        android:title="About"
+        android:title="@string/recipe_search_menu_about"
         app:showAsAction="never" />
 </menu>
