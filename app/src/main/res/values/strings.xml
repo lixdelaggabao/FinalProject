@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Final Project</string>
+    <string name="dictionaryWelcomeText">Welcome to the Mobile Dictionary!</string>
+    <string name="dictionaryEnterText">Enter term to lookup below.</string>
+    <string name="dictionaryLookupHint">Search the Mobile Dictionary.</string>
+    <string name="dictionaryBtnLookup">Lookup</string>
+    <string name="dictionarySavedSearches">Saved</string>
+    <string name="dictionaryBtnSearch">Search</string>
     <string name="sunrise_and_sunset_lookup">Sunrise and Sunset Lookup</string>
     <string name="recipe_search">Recipe Search</string>
     <string name="dictionary">Dictionary</string>

@@ -14,11 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
+
         <activity
-            android:name=".RecipeSearch.SavedRecipes"
+            android:name=".RecipeSearch.RecipeSearch"
             android:exported="false" />
         <activity
-            android:name=".AllRecipes"
+            android:name=".RecipeSearch.SavedRecipes"
             android:exported="false" />
         <activity
             android:name=".RecipeSearch.RecipeDetailsFragment"
@@ -28,9 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".DeezerSongSearch"
-            android:exported="false" />
-        <activity
-            android:name=".RecipeSearch.RecipeSearch"
             android:exported="false" />
         <activity
             android:name=".SunriseAndSunsetLookup"

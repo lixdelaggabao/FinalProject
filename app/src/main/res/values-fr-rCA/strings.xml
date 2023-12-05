@@ -1,5 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Projet Final</string>
+    <string name="dictionaryWelcomeText">Bienvenue dans le dictionnaire mobile!</string>
+    <string name="dictionaryEnterText">Entrez le terme à rechercher ci-dessous.</string>
+    <string name="dictionaryLookupHint">Entrez le terme.</string>
+    <string name="dictionaryBtnLookup">Chercher</string>
+    <string name="dictionarySavedSearches">Enregistré</string>
+    <string name="dictionaryBtnSearch">Recherche</string>
     <string name="sunrise_and_sunset_lookup">Recherche du lever et du coucher du soleil</string>
     <string name="recipe_search">Recherche de recettes</string>
     <string name="dictionary">Dictionnaire</string>
