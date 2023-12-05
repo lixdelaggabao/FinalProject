@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,16 +16,19 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".RecipeSearch.RecipeSearch"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeSearch.SavedRecipes"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeSearch.RecipeDetailsFragment"
+            android:exported="false" />
+        <activity
             android:name=".Dictionary"
             android:exported="false" />
         <activity
             android:name=".DeezerSongSearch"
-            android:exported="false" />
-        <activity
-            android:name=".DictionaryAPI"
-            android:exported="false" />
-        <activity
-            android:name=".RecipeSearch"
             android:exported="false" />
         <activity
             android:name=".SunriseAndSunsetLookup"
