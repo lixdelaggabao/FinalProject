@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeDetails">
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".RecipeSearch.RecipeDetailsFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -12,6 +15,8 @@
         android:layout_height="wrap_content"
         android:background="@color/secondary"
         app:titleTextColor="@color/white"
+        app:logo="@drawable/recipe_search"
+        app:title="@string/recipe_search"
         app:layout_constraintBottom_toTopOf="@+id/recipeDetailsScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,13 +36,14 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/recipeTitle"
+                android:id="@+id/recipeDetailsTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Sample Recipe"
+                android:layout_marginTop="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:visibility="invisible"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -46,20 +52,25 @@
                 android:id="@+id/recipeDetailsImageView"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recipeTitle"
-                android:src="@drawable/sample_recipe" />
+                app:layout_constraintTop_toBottomOf="@+id/recipeDetailsTitleTextView" />
 
             <TextView
                 android:id="@+id/recipeDetailsSummaryTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:justificationMode="inter_word"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum iaculis eu non diam. Ac tincidunt vitae semper quis lectus nulla at. Odio eu feugiat pretium nibh ipsum consequat nisl vel. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Nunc congue nisi vitae suscipit tellus mauris. Massa tincidunt nunc pulvinar sapien et. Commodo elit at imperdiet dui accumsan sit. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Arcu felis bibendum ut tristique et egestas quis ipsum. Eu volutpat odio facilisis mauris sit amet massa. Consequat semper viverra nam libero justo laoreet sit amet. Ut placerat orci nulla pellentesque. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Eros in cursus turpis massa tincidunt dui. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar."
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recipeDetailsImageView" />
@@ -68,26 +79,18 @@
                 android:id="@+id/recipeDetailsSourceUrlTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="http://www.foodista.com/recipe/K6QWSKQM/pasta-with-tuna"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:textSize="12sp"
                 android:textStyle="italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recipeDetailsSummaryTextView" />
-
-            <Button
-                android:id="@+id/recipeDetailsAddRecipeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:backgroundTint="@color/primary"
-                android:text="Save Recipe"
+                android:visibility="invisible"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recipeDetailsSourceUrlTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/recipeDetailsSummaryTextView" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

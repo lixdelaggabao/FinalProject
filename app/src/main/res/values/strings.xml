@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <string name="app_name">Final Project</string>
+    <string name="sunrise_and_sunset_lookup">Sunrise and Sunset Lookup</string>
+    <string name="recipe_search">Recipe Search</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="deezer_song_search">Deezer Song Search</string>
+    <string name="recipe_search_menu_home">Home</string>
+    <string name="recipe_search_menu_save_recipe">Save recipe</string>
+    <string name="recipe_search_menu_delete_recipe">Delete recipe</string>
+    <string name="recipe_search_menu_view_recipes">View saved recipes</string>
+    <string name="recipe_search_menu_help">Help</string>
+    <string name="recipe_search_menu_about">About</string>
+    <string name="recipe_search_help_title">Instructions:</string>
+    <string name="recipe_search_help_message">1. Use the search bar to find your desired recipe.\n2. Click on a recipe to view detailed information.\n3. Save recipes you love for easy access anytime.\n4. Explore and manage your saved recipes by tapping the \"View saved recipes\" button.</string>
+    <string name="recipe_search_help_button">OK</string>
+    <string name="recipe_search_about_message">Version 1.0, created by Lixdel Louisse Aggabao</string>
+    <string name="recipe_search_search_hint">Search recipe...</string>
+    <string name="recipe_search_delete_recipe_title">Question:</string>
+    <string name="recipe_search_delete_recipe_message">Do you want to delete the recipe:</string>
+    <string name="recipe_search_delete_recipe_positive">Yes</string>
+    <string name="recipe_search_delete_recipe_negative">No</string>
+    <string name="recipe_search_delete_recipe_confirmation">You deleted recipe:</string>
+    <string name="recipe_search_delete_recipe_undo">Undo</string>
+    <string name="recipe_search_successful_save_message">Recipe saved successfully.</string>
+    <string name="recipe_search_failed_save_message">This recipe already exists in your saved recipes.</string>
+    <string name="recipe_search_saved_recipes_text">Saved Recipes</string>
+    <string name="recipe_search_image_description">Image of</string>
 </resources>

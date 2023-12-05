@@ -6,40 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/sunriseAndSunsetLookupBtn"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Sunrise and Sunset Lookup"
+        android:background="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:titleTextColor="@color/white" />
 
-    <Button
-        android:id="@+id/deezerSongSearchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Deezer Song Search"
-        app:layout_constraintStart_toStartOf="@+id/dictionaryBtn"
-        app:layout_constraintTop_toBottomOf="@+id/dictionaryBtn" />
-
-    <Button
-        android:id="@+id/dictionaryBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:text="Dictionary"
-        app:layout_constraintStart_toStartOf="@+id/recipeSearchBtn"
-        app:layout_constraintTop_toBottomOf="@+id/recipeSearchBtn" />
-
-    <Button
-        android:id="@+id/recipeSearchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Recipe Search"
-        app:layout_constraintStart_toStartOf="@+id/sunriseAndSunsetLookupBtn"
-        app:layout_constraintTop_toBottomOf="@+id/sunriseAndSunsetLookupBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
