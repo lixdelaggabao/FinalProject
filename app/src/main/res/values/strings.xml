@@ -42,7 +42,6 @@
     <string name="search_button">Search</string>
     <string name="save_button">Save</string>
     <string name="inserted_song_message">You inserted a song into the database</string>
-    <string name="app_name">Deezer Song Search</string>
     <string name="enter_search_query">Enter search query</string>
     <string name="search">Search</string>
     <string name="save">Save</string>
