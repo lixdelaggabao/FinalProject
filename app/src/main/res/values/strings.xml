@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <!-- Add your existing string entries here -->
+
+    <string name="sunrise_time">Sunrise time is: %1$s</string>
+    <string name="sunset_time">Sunset time is: %1$s</string>
+    <string name="data_saved_to_favorites">Data saved to favorites!</string>
+    <string name="failed_to_save_data_to_favorites">Failed to save data to favorites</string>
+    <string name="app_help_message">This app was provided by Mohammadhassan Yeganeshenas</string>
+    <string name="save_to_database">Save to Database</string>
+    <string name="confirm_save_to_database">Are you sure you want to add this data to the database?</string>
+    <string name="data_saved_to_database">Data saved to the database!</string>
+    <string name="failed_to_save_data_to_database">Failed to save data to the database</string>
+    <string name="cancel">Cancel</string>
+    <string name="app_name"> final project</string>
+    <string name="lookupButton"> Lookup </string>
+    <string name="help">Help</string>
 </resources>
