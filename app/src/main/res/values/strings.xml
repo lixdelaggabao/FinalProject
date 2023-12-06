@@ -31,4 +31,21 @@
     <string name="recipe_search_failed_save_message">This recipe already exists in your saved recipes.</string>
     <string name="recipe_search_saved_recipes_text">Saved Recipes</string>
     <string name="recipe_search_image_description">Image of</string>
+    <string name="delete_confirmation_title">Question</string>
+    <string name="delete_confirmation_message">Do you want to delete this Song?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="about_message">Ali Komijani</string>
+    <string name="song_deleted_message">You deleted a Song</string>
+    <string name="undo">Undo</string>
+    <string name="song_saved_message">You inserted a song into the database</string>
+    <string name="search_button">Search</string>
+    <string name="save_button">Save</string>
+    <string name="inserted_song_message">You inserted a song into the database</string>
+    <string name="app_name">Deezer Song Search</string>
+    <string name="enter_search_query">Enter search query</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="delete_button">Delete</string>
+    <string name="about_button">About</string>
 </resources>
