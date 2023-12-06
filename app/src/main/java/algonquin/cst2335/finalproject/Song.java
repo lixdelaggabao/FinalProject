@@ -18,7 +18,7 @@ public class Song {
     @ColumnInfo(name = "title")
     public String title;
 
-    @ColumnInfo(name = "artist")
+    @ColumnInfo(name = "link")
     public String artist;
 
     @PrimaryKey(autoGenerate = true)

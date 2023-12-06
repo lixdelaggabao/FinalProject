@@ -14,7 +14,7 @@ public class SongDetailsFragment extends Fragment {
     private Song selected;
     public SongDetailsFragment(Song song) {selected = song;}
 
-        public View onViewCreated(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
+        public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
         super.onCreateView(inflater, container, saveInstanceState);
             FragmentSongDetailBinding binding = FragmentSongDetailBinding.inflate(inflater);
 

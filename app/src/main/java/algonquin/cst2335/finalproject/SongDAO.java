@@ -14,7 +14,7 @@ public interface SongDAO {
 
     @Query("SELECT * FROM Song")
     List<Song> getAllSongs();
-@Query("select artist from Song")
+   @Query("select title from Song")
     List<String> getAllSong();
     @Delete
     void deleteSong(Song song);
