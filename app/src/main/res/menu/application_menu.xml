@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sunriseAndSunsetLookup"
+        android:icon="@drawable/sunrise_and_sunset_lookup"
+        android:title="@string/sunrise_and_sunset_lookup"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/recipeSearch"
+        android:icon="@drawable/recipe_search"
+        android:title="@string/recipe_search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/dictionary"
+        android:icon="@drawable/dictionary"
+        android:title="@string/dictionary"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/deezerSongSearch"
+        android:icon="@drawable/deezer_song_search"
+        android:title="@string/deezer_song_search"
+        app:showAsAction="always" />
+</menu>

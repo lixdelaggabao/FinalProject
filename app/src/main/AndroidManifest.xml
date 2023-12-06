@@ -5,27 +5,33 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
+
+        <activity
+            android:name=".RecipeSearch.RecipeSearch"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeSearch.SavedRecipes"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeSearch.RecipeDetailsFragment"
+            android:exported="false" />
         <activity
             android:name=".Dictionary"
             android:exported="false" />
         <activity
             android:name=".DeezerSongSearch"
-            android:exported="false" />
-        <activity
-            android:name=".DictionaryAPI"
-            android:exported="false" />
-        <activity
-            android:name=".RecipeSearch"
             android:exported="false" />
         <activity
             android:name=".SunriseAndSunsetLookup"
