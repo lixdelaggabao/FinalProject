@@ -51,65 +51,83 @@ public class DeezerSongSearch extends AppCompatActivity {
     protected RequestQueue queue = null;
     private SongDAO dDAO;
     private ArrayList<Song> definitions;
-    private RecyclerView.Adapter myAdapter;
+    private RecyclerView.Adapter<MyRowHolder> myAdapter;
     private Executor thread;
     private int position;
     ActivityDeezerSongSearchBinding binding;
     DeezerViewModel DeezerModel;
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if ( item.getItemId() == R.id.item_1 ) {
-
-
-            AlertDialog.Builder builder = new AlertDialog.Builder( DeezerSongSearch.this );
-            builder.setMessage("Do you want to delete this Song?")
-                    .setTitle("Question")
-                    .setPositiveButton("Yes", ( dialog, cl ) -> {
-                        Executor thread = Executors.newSingleThreadExecutor();
-                        thread.execute(() -> {
-                            Song w = definitions.get( position );
-                            dDAO.deleteSong( w );
-                            definitions.remove( w );
-                            runOnUiThread(() -> myAdapter.notifyItemRemoved( position ));
-                            Snackbar.make( findViewById(R.id.fragmentLocation ), "You deleted a Song", Snackbar.LENGTH_LONG)
-                                    .setAction("Undo", click -> {
-                                        definitions.add( w ); //w is the removed message, at position
-                                        myAdapter.notifyItemInserted( position );
-                                    })//end undo action
-                                    .show();
-                        });
-                    })//end positive button
-                    .setNegativeButton("No", ( dialog, cl ) -> { })
-                    .create().show();
-
+        if (item.getItemId() == R.id.item_1) {
+            showDeleteConfirmationDialog();
+        } else if (item.getItemId() == R.id.About) {
+            showAboutDialog();
+        } else if (item.getItemId() == R.id.Save) {
+            saveSongToDatabase();
         }
-        else if ( item.getItemId() == R.id.About) {
-
-            //toast saying something about the version
-            Context context = getApplicationContext();
-            String text = "Ali Komijani";
-            int duration = Toast.LENGTH_LONG;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
-        else if ( item.getItemId() == R.id.Save ) {
-            View view = findViewById(R.id.Save);
-            //save the definition to the database
-            thread = Executors.newSingleThreadExecutor();
-            thread.execute( () -> {
-                Song w = definitions.get( position );
-                dDAO.insertSong( w );
-                definitions.remove( position );
-                runOnUiThread( () -> myAdapter.notifyItemRemoved( position ) );
-                Snackbar.make ( view, "You inserted a song into the database", Snackbar.LENGTH_LONG).show();
-
-            });
-        }
-        //close the fragment
+        // Close the fragment
         getSupportFragmentManager().popBackStack();
         return true;
+    }
+
+    private void showDeleteConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(DeezerSongSearch.this);
+        builder.setMessage(getString(R.string.delete_confirmation_message))
+                .setTitle(getString(R.string.delete_confirmation_title))
+                .setPositiveButton(getString(R.string.yes), (dialog, cl) -> {
+                    deleteSong();
+                })
+                .setNegativeButton(getString(R.string.no), (dialog, cl) -> {
+                    // Do nothing on negative button click
+                })
+                .create().show();
+    }
+
+    private void deleteSong() {
+        Executor thread = Executors.newSingleThreadExecutor();
+        thread.execute(() -> {
+            Song songToDelete = definitions.get(position);
+            dDAO.deleteSong(songToDelete);
+            definitions.remove(songToDelete);
+            runOnUiThread(() -> myAdapter.notifyItemRemoved(position));
+            showUndoSnackbar(songToDelete);
+        });
+    }
+
+    private void showUndoSnackbar(Song song) {
+        View view = findViewById(R.id.fragmentLocation);
+        Snackbar.make(view, getString(R.string.song_deleted_message), Snackbar.LENGTH_LONG)
+                .setAction(getString(R.string.undo), click -> {
+                    definitions.add(position, song);
+                    myAdapter.notifyItemInserted(position);
+                })
+                .show();
+    }
+
+    private void showAboutDialog() {
+        // Toast saying something about the version
+        Context context = getApplicationContext();
+        String text = getString(R.string.about_message);
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    private void saveSongToDatabase() {
+        View view = findViewById(R.id.Save);
+        thread = Executors.newSingleThreadExecutor();
+        thread.execute(() -> {
+            Song songToSave = definitions.get(position);
+            dDAO.insertSong(songToSave);
+            definitions.remove(position);
+            runOnUiThread(() -> myAdapter.notifyItemRemoved(position));
+            showSaveSnackbar(view);
+        });
+    }
+
+    private void showSaveSnackbar(View view) {
+        Snackbar.make(view, getString(R.string.song_saved_message), Snackbar.LENGTH_LONG).show();
     }
 
     @Override
@@ -128,12 +146,15 @@ public class DeezerSongSearch extends AppCompatActivity {
 
         SongDatabase db = Room.databaseBuilder(getApplicationContext(), SongDatabase.class, "definitions").build();
         dDAO = db.songDAO();
-        thread = Executors.newSingleThreadExecutor();  // Add this line to initialize the thread
+        thread = Executors.newSingleThreadExecutor();
         queue = Volley.newRequestQueue(this);
 
         DeezerModel = new ViewModelProvider(this).get(DeezerViewModel.class);
         definitions = DeezerModel.searchResults.getValue();
-
+        if (definitions == null) {
+            definitions = new ArrayList<>();
+            DeezerModel.searchResults.setValue(definitions);
+        }
         DeezerModel.selectedSong.observe(this, (newDefinitionValue) -> {
             FragmentManager fMgr = getSupportFragmentManager();
             FragmentTransaction tx = fMgr.beginTransaction();
@@ -168,7 +189,9 @@ public class DeezerSongSearch extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
-                                definitions.clear();
+                                if (definitions == null) {
+                                    definitions = new ArrayList<>();
+                                }
                                 JSONArray a = response.getJSONArray("data");
                                 for (int i = 0; i < a.length(); i++) {
                                     JSONObject hobby = a.getJSONObject(i);
@@ -203,15 +226,12 @@ public class DeezerSongSearch extends AppCompatActivity {
         btnSaved.setOnClickListener(clk -> {
             // Save each song to the database
             thread.execute(() -> {
-                for (Song song : definitions) {
-                    dDAO.insertSong(song);
-                }
-
-                // Clear the list (optional, depending on your use case)
-                definitions.clear();
-
-                // Update the RecyclerView
                 runOnUiThread(() -> myAdapter.notifyDataSetChanged());
+                definitions.addAll(dDAO.getAllSongs());
+
+                // load them into the RecycleView
+                runOnUiThread(() -> binding.recyclerView.setAdapter(myAdapter));
+
             });
         });
 
