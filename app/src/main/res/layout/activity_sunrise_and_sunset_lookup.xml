@@ -1,18 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SunriseAndSunsetLookup">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sunrise and Sunset Lookup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/softLavender"
+        tools:context=".SunriseAndSunsetLookup">
+
+
+        <EditText
+            android:id="@+id/lantitudeEt"
+            android:layout_width="104dp"
+            android:layout_height="44dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/baseline_location_searching_24"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Lantitude"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.281"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.224" />
+
+        <EditText
+            android:id="@+id/longtitudeEt"
+            android:layout_width="104dp"
+            android:layout_height="44dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/baseline_location_searching_24"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="longitude "
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.742"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.224" />
+
+        <Button
+            android:id="@+id/lookup_bt"
+            android:layout_width="137dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="72dp"
+            android:rotation="0"
+            android:rotationX="0"
+            android:text="@string/lookupButton"
+            app:icon="@android:drawable/ic_dialog_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lantitudeEt" />
+
+        <TextView
+            android:id="@+id/sunrise"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
+            android:text="sunrise goes here"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lookup_bt"
+            app:layout_constraintVertical_bias="0.132" />
+
+        <TextView
+            android:id="@+id/sunset"
+            android:layout_width="257dp"
+            android:layout_height="33dp"
+            android:text="sunset goes here"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunrise"
+            app:layout_constraintVertical_bias="0.044" />
+
+        <Button
+            android:id="@+id/saveToFavoriteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_saved_to_favorites"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lookup_bt"
+            app:layout_constraintVertical_bias="0.741" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/lantitudeEt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.042" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

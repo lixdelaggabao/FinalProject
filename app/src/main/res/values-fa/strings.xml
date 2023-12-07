@@ -1,0 +1,17 @@
+<resources>
+    <!-- Add your existing string entries here -->
+
+    <string name="sunrise_time">زمان طلوع خورشید: %1$s</string>
+    <string name="sunset_time">زمان غروب خورشید: %1$s</string>
+    <string name="data_saved_to_favorites">داده به مورد علاقه‌ها افزوده شد!</string>
+    <string name="failed_to_save_data_to_favorites">عدم موفقیت در ذخیره داده به مورد علاقه‌ها</string>
+    <string name="app_help_message">این برنامه توسط محمدحسن یگانشناس ارائه شده است</string>
+    <string name="save_to_database">ذخیره در پایگاه داده</string>
+    <string name="confirm_save_to_database">آیا مطمئن هستید که می‌خواهید این داده را در پایگاه داده اضافه کنید؟</string>
+    <string name="data_saved_to_database">داده در پایگاه داده ذخیره شد!</string>
+    <string name="failed_to_save_data_to_database">عدم موفقیت در ذخیره داده در پایگاه داده</string>
+    <string name="cancel">لغو</string>
+    <string name="app_name"> نام </string>
+    <string name="lookupButton">جستجو</string>
+    <string name="help">راهنمایی</string>
+</resources>

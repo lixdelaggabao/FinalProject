@@ -7,6 +7,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,6 +30,15 @@
             android:name=".RecipeSearch.RecipeDetailsFragment"
             android:exported="false" />
         <activity
+            android:name=".WeatherRoom"
+            android:exported="false" />
+        <activity
+            android:name=".SunriseAndSunsetViewModel"
+            android:exported="false" />
+        <activity
+            android:name=".SunriseAndSunset3"
+            android:exported="false" />
+        <activity
             android:name=".Dictionary"
             android:exported="false" />
         <activity
@@ -35,7 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".SunriseAndSunsetLookup"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
