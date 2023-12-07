@@ -1,0 +1,19 @@
+<resources>
+    <string name="delete_confirmation_title">سوال</string>
+    <string name="delete_confirmation_message">آیا می‌خواهید این آهنگ را حذف کنید؟</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="about_message">علی کمیجانی</string>
+    <string name="song_deleted_message">شما یک آهنگ حذف کردید</string>
+    <string name="undo">بازگشت</string>
+    <string name="song_saved_message">شما یک آهنگ را به پایگاه داده وارد کردید</string>
+    <string name="search_button">جستجو</string>
+    <string name="save_button">ذخیره</string>
+    <string name="inserted_song_message">شما یک آهنگ را به پایگاه داده وارد کردید</string>
+    <string name="app_name">جستجوی آهنگ Deezer</string>
+    <string name="enter_search_query">عبارت جستجو را وارد کنید</string>
+    <string name="search">جستجو</string>
+    <string name="save">ذخیره</string>
+    <string name="delete_button">پاک شود</string>
+    <string name="about_button">درمورد من</string>
+</resources>

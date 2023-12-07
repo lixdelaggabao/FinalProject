@@ -5,4 +5,6 @@
     <color name="DarkGray">#AAAAAA</color>
     <color name="colorPrimary"> #6200EE </color>
     <color name="softLavender">#EDE7F6</color>
+    <color name="primary">#003060</color>
+    <color name="secondary">#0E86D4</color>
 </resources>
